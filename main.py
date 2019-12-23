@@ -1,5 +1,6 @@
 import Database_GUI
 from tkinter import *
+from Database_functions import *
 
 if __name__ == '__main__':
     root = Tk()
