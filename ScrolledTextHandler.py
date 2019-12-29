@@ -11,7 +11,8 @@ class ScrolledTextHandler(logging.Handler):
         self.scrolled_text.tag_config('WARNING', foreground='orange')
         self.scrolled_text.tag_config('ERROR', foreground='red')
         self.scrolled_text.tag_config('CRITICAL', foreground='red', underline=1)
-        self.setFormatter(logging.Formatter('%(asctime)s - %(message)s'))
+        formatter = logging.Formatter('%(asctime)s - %(message)s')
+        self.setFormatter(formatter)
 
     def emit(self, record):
         msg = self.format(record)
